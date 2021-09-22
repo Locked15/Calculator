@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android = "http://schemas.android.com/apk/res/android"
+xmlns:app = "http://schemas.android.com/apk/res-auto"
+xmlns:tools = "http://schemas.android.com/tools"
+android:id = "@+id/MainLayout"
+android:layout_width = "match_parent"
+android:layout_height = "match_parent"
+android:background = "#DDDBDF"
+tools:context = ".MainActivity">
+	<!-- Блок ответа: -->
+	<TextView
+	android:id = "@+id/AnswerView"
+	android:layout_width = "match_parent"
+	android:layout_height = "250dp"
+	android:background = "@drawable/rounded_answer_block"
+	android:gravity = "end"
+	android:textSize = "60sp"
+	android:typeface = "monospace"
+	app:layout_constraintBottom_toTopOf = "@id/NumberThree"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toTopOf = "parent"/>
+
+	<!-- region Первый ряд кнопок: -->
+	<Button
+	android:id = "@+id/NumberOne"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberOne"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberFour"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toLeftOf = "@id/NumberTwo"
+	app:layout_constraintTop_toBottomOf = "@+id/AnswerView"/>
+
+	<Button
+	android:id = "@+id/NumberTwo"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberTwo"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberFive"
+	app:layout_constraintLeft_toRightOf = "@id/NumberOne"
+	app:layout_constraintRight_toLeftOf = "@id/NumberThree"
+	app:layout_constraintTop_toBottomOf = "@id/AnswerView"/>
+
+	<Button
+	android:id = "@+id/NumberThree"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberThree"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberSix"
+	app:layout_constraintLeft_toRightOf = "@id/NumberTwo"
+	app:layout_constraintRight_toLeftOf = "@id/ActionPlus"
+	app:layout_constraintTop_toBottomOf = "@id/AnswerView"/>
+
+	<Button
+	android:id = "@+id/ActionPlus"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/Plus"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/ActionMinus"
+	app:layout_constraintLeft_toRightOf = "@id/NumberThree"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toBottomOf = "@id/AnswerView"/>
+	<!-- endregion -->
+
+	<!-- region Второй ряд кнопок: -->
+	<Button
+	android:id = "@+id/NumberFour"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberFour"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberSeven"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toLeftOf = "@id/NumberFive"
+	app:layout_constraintTop_toBottomOf = "@+id/NumberOne"/>
+
+	<Button
+	android:id = "@+id/NumberFive"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberFive"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberEight"
+	app:layout_constraintLeft_toRightOf = "@id/NumberFour"
+	app:layout_constraintRight_toLeftOf = "@id/NumberSix"
+	app:layout_constraintTop_toBottomOf = "@id/NumberTwo"/>
+
+	<Button
+	android:id = "@+id/NumberSix"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberSix"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberNine"
+	app:layout_constraintLeft_toRightOf = "@id/NumberFive"
+	app:layout_constraintRight_toLeftOf = "@id/ActionMinus"
+	app:layout_constraintTop_toBottomOf = "@id/NumberThree"/>
+
+	<Button
+	android:id = "@+id/ActionMinus"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/Minus"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/ActionMultiply"
+	app:layout_constraintLeft_toRightOf = "@id/NumberSix"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toBottomOf = "@id/ActionPlus"/>
+	<!-- endregion -->
+
+	<!-- region Третий ряд кнопок: -->
+	<Button
+	android:id = "@+id/NumberSeven"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberSeven"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "@id/ActionLeftBrace"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toLeftOf = "@id/NumberEight"
+	app:layout_constraintTop_toBottomOf = "@+id/NumberFour"/>
+
+	<Button
+	android:id = "@+id/NumberEight"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberEight"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "@id/ActionRightBrace"
+	app:layout_constraintLeft_toRightOf = "@id/NumberSeven"
+	app:layout_constraintRight_toLeftOf = "@id/NumberNine"
+	app:layout_constraintTop_toBottomOf = "@id/NumberFive"/>
+
+	<Button
+	android:id = "@+id/NumberNine"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberNine"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/NumberZero"
+	app:layout_constraintLeft_toRightOf = "@id/NumberEight"
+	app:layout_constraintRight_toLeftOf = "@id/ActionMultiply"
+	app:layout_constraintTop_toBottomOf = "@id/NumberSix"/>
+
+	<Button
+	android:id = "@+id/ActionMultiply"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/Multiply"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "@id/ActionDegree"
+	app:layout_constraintLeft_toRightOf = "@id/NumberNine"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toBottomOf = "@id/ActionMinus"/>
+	<!-- endregion -->
+
+	<!-- region Четвертый ряд кнопок: -->
+	<Button
+	android:id = "@+id/ActionLeftBrace"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/LeftBrace"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/DeleteCharButton"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toLeftOf = "@id/ActionRightBrace"
+	app:layout_constraintTop_toBottomOf = "@+id/NumberSeven"/>
+
+	<Button
+	android:id = "@+id/ActionRightBrace"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/RightBrace"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/ClearAllButton"
+	app:layout_constraintLeft_toRightOf = "@id/ActionLeftBrace"
+	app:layout_constraintRight_toLeftOf = "@id/NumberZero"
+	app:layout_constraintTop_toBottomOf = "@id/NumberEight"/>
+
+	<Button
+	android:id = "@+id/NumberZero"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "numberAreClicked"
+	android:text = "@string/NumberZero"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/ActionPoint"
+	app:layout_constraintLeft_toRightOf = "@id/ActionRightBrace"
+	app:layout_constraintRight_toLeftOf = "@id/ActionDegree"
+	app:layout_constraintTop_toBottomOf = "@id/NumberNine"/>
+
+	<Button
+	android:id = "@+id/ActionDegree"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/Degree"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toTopOf = "@id/GetAnswer"
+	app:layout_constraintLeft_toRightOf = "@id/NumberZero"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toBottomOf = "@id/ActionMultiply"/>
+	<!-- endregion -->
+
+	<!-- region Пятый ряд кнопок: -->
+	<Button
+	android:id = "@+id/DeleteCharButton"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "deleteLastChar"
+	android:text = "@string/DeleteOne"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "parent"
+	app:layout_constraintLeft_toLeftOf = "parent"
+	app:layout_constraintRight_toLeftOf = "@id/ClearAllButton"
+	app:layout_constraintTop_toBottomOf = "@id/ActionLeftBrace"/>
+
+	<Button
+	android:id = "@+id/ClearAllButton"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_blue_button"
+	android:onClick = "clearAll"
+	android:text = "@string/ClearAll"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "parent"
+	app:layout_constraintLeft_toRightOf = "@id/DeleteCharButton"
+	app:layout_constraintRight_toLeftOf = "@id/ActionPoint"
+	app:layout_constraintTop_toBottomOf = "@id/ActionRightBrace"/>
+
+	<Button
+	android:id = "@+id/ActionPoint"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_gray_button"
+	android:onClick = "operationIsClicked"
+	android:text = "@string/Point"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "parent"
+	app:layout_constraintLeft_toRightOf = "@id/ClearAllButton"
+	app:layout_constraintRight_toLeftOf = "@id/GetAnswer"
+	app:layout_constraintTop_toBottomOf = "@id/NumberZero"/>
+
+	<Button
+	android:id = "@+id/GetAnswer"
+	android:layout_width = "0dp"
+	android:layout_height = "0dp"
+	android:layout_margin = "5dp"
+	android:background = "@drawable/rounded_answer_button"
+	android:onClick = "calculateAnswer"
+	android:text = "@string/GetAnswer"
+	android:textSize = "26sp"
+	app:layout_constraintBottom_toBottomOf = "parent"
+	app:layout_constraintLeft_toRightOf = "@id/ActionPoint"
+	app:layout_constraintRight_toRightOf = "parent"
+	app:layout_constraintTop_toBottomOf = "@id/ActionDegree"/>
+	<!-- endregion -->
+</androidx.constraintlayout.widget.ConstraintLayout>
