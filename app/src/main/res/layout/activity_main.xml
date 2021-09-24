@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version = "1.0" encoding = "utf-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout
 xmlns:android = "http://schemas.android.com/apk/res/android"
@@ -149,7 +149,7 @@ tools:context = ".MainActivity">
 	android:onClick = "numberAreClicked"
 	android:text = "@string/NumberSeven"
 	android:textSize = "26sp"
-	app:layout_constraintBottom_toBottomOf = "@id/ActionLeftBrace"
+	app:layout_constraintBottom_toBottomOf = "@id/LeftBrace"
 	app:layout_constraintLeft_toLeftOf = "parent"
 	app:layout_constraintRight_toLeftOf = "@id/NumberEight"
 	app:layout_constraintTop_toBottomOf = "@+id/NumberFour"/>
@@ -163,7 +163,7 @@ tools:context = ".MainActivity">
 	android:onClick = "numberAreClicked"
 	android:text = "@string/NumberEight"
 	android:textSize = "26sp"
-	app:layout_constraintBottom_toBottomOf = "@id/ActionRightBrace"
+	app:layout_constraintBottom_toBottomOf = "@id/RightBrace"
 	app:layout_constraintLeft_toRightOf = "@id/NumberSeven"
 	app:layout_constraintRight_toLeftOf = "@id/NumberNine"
 	app:layout_constraintTop_toBottomOf = "@id/NumberFive"/>
@@ -199,30 +199,30 @@ tools:context = ".MainActivity">
 
 	<!-- region Четвертый ряд кнопок: -->
 	<Button
-	android:id = "@+id/ActionLeftBrace"
+	android:id = "@+id/LeftBrace"
 	android:layout_width = "0dp"
 	android:layout_height = "0dp"
 	android:layout_margin = "5dp"
 	android:background = "@drawable/rounded_blue_button"
-	android:onClick = "operationIsClicked"
+	android:onClick = "bracketIsClicked"
 	android:text = "@string/LeftBrace"
 	android:textSize = "26sp"
 	app:layout_constraintBottom_toTopOf = "@id/DeleteCharButton"
 	app:layout_constraintLeft_toLeftOf = "parent"
-	app:layout_constraintRight_toLeftOf = "@id/ActionRightBrace"
+	app:layout_constraintRight_toLeftOf = "@id/RightBrace"
 	app:layout_constraintTop_toBottomOf = "@+id/NumberSeven"/>
 
 	<Button
-	android:id = "@+id/ActionRightBrace"
+	android:id = "@+id/RightBrace"
 	android:layout_width = "0dp"
 	android:layout_height = "0dp"
 	android:layout_margin = "5dp"
 	android:background = "@drawable/rounded_blue_button"
-	android:onClick = "operationIsClicked"
+	android:onClick = "bracketIsClicked"
 	android:text = "@string/RightBrace"
 	android:textSize = "26sp"
 	app:layout_constraintBottom_toTopOf = "@id/ClearAllButton"
-	app:layout_constraintLeft_toRightOf = "@id/ActionLeftBrace"
+	app:layout_constraintLeft_toRightOf = "@id/LeftBrace"
 	app:layout_constraintRight_toLeftOf = "@id/NumberZero"
 	app:layout_constraintTop_toBottomOf = "@id/NumberEight"/>
 
@@ -236,7 +236,7 @@ tools:context = ".MainActivity">
 	android:text = "@string/NumberZero"
 	android:textSize = "26sp"
 	app:layout_constraintBottom_toTopOf = "@id/ActionDivide"
-	app:layout_constraintLeft_toRightOf = "@id/ActionRightBrace"
+	app:layout_constraintLeft_toRightOf = "@id/RightBrace"
 	app:layout_constraintRight_toLeftOf = "@id/ActionDegree"
 	app:layout_constraintTop_toBottomOf = "@id/NumberNine"/>
 
@@ -268,7 +268,7 @@ tools:context = ".MainActivity">
 	app:layout_constraintBottom_toBottomOf = "parent"
 	app:layout_constraintLeft_toLeftOf = "parent"
 	app:layout_constraintRight_toLeftOf = "@id/ClearAllButton"
-	app:layout_constraintTop_toBottomOf = "@id/ActionLeftBrace"/>
+	app:layout_constraintTop_toBottomOf = "@id/LeftBrace"/>
 
 	<Button
 	android:id = "@+id/ClearAllButton"
@@ -282,7 +282,7 @@ tools:context = ".MainActivity">
 	app:layout_constraintBottom_toBottomOf = "parent"
 	app:layout_constraintLeft_toRightOf = "@id/DeleteCharButton"
 	app:layout_constraintRight_toLeftOf = "@id/ActionDivide"
-	app:layout_constraintTop_toBottomOf = "@id/ActionRightBrace"/>
+	app:layout_constraintTop_toBottomOf = "@id/RightBrace"/>
 
 	<Button
 	android:id = "@+id/ActionDivide"
